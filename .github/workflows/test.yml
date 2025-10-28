@@ -60,7 +60,7 @@ jobs:
    needs: security
    if: github.ref == 'refs/heads/main'
    runs-on: ubuntu-latest
-   environment: production
+   environment: Prod
    steps:
      - uses: actions/checkout@v4
      
