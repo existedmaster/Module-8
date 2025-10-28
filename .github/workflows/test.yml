@@ -75,8 +75,8 @@ jobs:
        with:
          push: true
          tags: |
-           existedmaster/module8:latest
            existedmaster/module8:${{ github.sha }}
+           existedmaster/module8:latest
          platforms: linux/amd64,linux/arm64
          cache-from: type=registry,ref=existedmaster/module8:cache
          cache-to: type=inline,mode=max
