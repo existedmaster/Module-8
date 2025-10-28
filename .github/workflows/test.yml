@@ -68,15 +68,15 @@ jobs:
      
      - uses: docker/login-action@v3
        with:
-         username: ${{ secrets.DOCKERHUB_USERNAME }}
-         password: ${{ secrets.DOCKERHUB_TOKEN }}
+         username: ${{ secrets.DOCKER_USER }}
+         password: ${{ secrets.DOCKER_KEY }}
          
      - uses: docker/build-push-action@v5
        with:
          push: true
          tags: |
-           kaw393939/601_module8:latest
-           kaw393939/601_module8:${{ github.sha }}
+           existedmaster/Module8:latest
+           existedmaster/Module8:${{ github.sha }}
          platforms: linux/amd64,linux/arm64
-         cache-from: type=registry,ref=kaw393939/601_module8:cache
+         cache-from: type=registry,ref=existedmaster/Module8:cache
          cache-to: type=inline,mode=max
